@@ -1,3 +1,4 @@
+import { TitleCasePipe } from '@angular/common';
 import { AccountService } from './../_services/account.service';
 import { Component, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -8,7 +9,13 @@ import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [FormsModule, BsDropdownModule, RouterLink, RouterLinkActive],
+  imports: [
+    FormsModule,
+    BsDropdownModule,
+    RouterLink,
+    RouterLinkActive,
+    TitleCasePipe,
+  ],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css',
 })
